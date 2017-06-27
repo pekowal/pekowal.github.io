@@ -77,7 +77,9 @@ a.portfolio:hover {
   text-decoration:none;
 }
 
-
+.bold {
+    font-weight: bold;
+}
 
 .tonext{
 	left:30%;

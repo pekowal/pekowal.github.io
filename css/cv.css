@@ -1,0 +1,83 @@
+body div {
+}
+
+.photo {
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+
+}
+
+.photo img {
+    /*width: 100px;*/
+    height: 150px;
+    border-radius: 50%;
+    border: solid 2px white;
+}
+
+#main {
+
+    background: #003e50;
+    padding: 20px;
+    font-family: 'Lobster', cursive;
+
+}
+
+.my-name {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    color: whitesmoke;
+
+}
+
+.contact {
+    color: whitesmoke;
+    padding: 10px;
+    text-align: center;
+}
+
+.contact div {
+    height: auto;
+    font-size: 15px;
+}
+
+.left-column h5 {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.progress {
+    background: #003e50;
+}
+
+.skills div {
+    text-align: center;
+}
+
+.skill {
+    margin: 15px 0 15px 0;
+}
+.lang{
+    margin: 15px 0 15px 0;
+    text-align: center;
+}
+
+.lang > div{
+    margin-bottom: .25rem!important;
+
+}
+
+.work-name{
+    text-transform: uppercase;
+}
+
+.work-name > span{
+    font-size: 18px;
+}
+
+.sec-header{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left !important;
+}
