@@ -1,0 +1,11 @@
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+/* line 7, ../sass/print.scss */
+#main-nav .container {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  -webkit-transition: padding .3s ease-out;
+  transition: padding .3s ease-out;
+  background: yellow;
+}
