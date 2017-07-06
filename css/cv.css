@@ -93,3 +93,9 @@ color: white;
 footer{
     background: #003e50;
 }
+.sec-header{
+    word-break: break-all;
+}
+#desc{
+    padding: 25px;
+}
