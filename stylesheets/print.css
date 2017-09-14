@@ -1,11 +1,236 @@
 /* Welcome to Compass. Use this file to define print styles.
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
-/* line 7, ../sass/print.scss */
+/* line 11, ../sass/print.scss */
+body {
+  color: #ffffff;
+}
+
+/* line 15, ../sass/print.scss */
+.main-color {
+  color: #1666c1;
+}
+
+/* line 19, ../sass/print.scss */
+#main-nav {
+  background: #1666c1;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  padding: 20px;
+}
+@media screen and (min-width: 767px) {
+  /* line 19, ../sass/print.scss */
+  #main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+/* line 33, ../sass/print.scss */
+#main-nav .navbar-toggle {
+  background-color: #249acd;
+}
+/* line 35, ../sass/print.scss */
+#main-nav .navbar-toggle .icon-bar {
+  background-color: black;
+}
+/* line 39, ../sass/print.scss */
 #main-nav .container {
   padding-top: 25px;
   padding-bottom: 25px;
-  -webkit-transition: padding .3s ease-out;
-  transition: padding .3s ease-out;
-  background: yellow;
+}
+/* line 43, ../sass/print.scss */
+#main-nav .navbar-brand {
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+/* line 44, ../sass/print.scss */
+#main-nav .navbar-brand .initial {
+  font-size: 20px;
+  letter-spacing: 5px;
+  color: #ffffff;
+}
+/* line 55, ../sass/print.scss */
+#main-nav #site-nav a {
+  min-width: 120px;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  padding: 7px 30px;
+  background: none;
+  transition: color 0.2s ease-out, padding 0.3s ease-out;
+}
+/* line 64, ../sass/print.scss */
+#main-nav #site-nav a:hover, #main-nav #site-nav a:focus {
+  padding-top: 4px;
+  padding-bottom: 10px;
+  color: #249acd;
+  background: none;
+}
+/* line 72, ../sass/print.scss */
+#main-nav #site-nav i {
+  margin-right: 15px;
+}
+
+/* line 80, ../sass/print.scss */
+#first-section {
+  position: fixed;
+  color: black;
+  z-index: -100;
+  height: 100vh;
+  width: 100vw;
+  padding-top: 100px;
+}
+/* line 85, ../sass/print.scss */
+#first-section .d1 {
+  font-size: 72px;
+  color: #39444C;
+}
+/* line 89, ../sass/print.scss */
+#first-section .d2 {
+  color: #249acd;
+}
+
+/* line 97, ../sass/print.scss */
+#main-content {
+  color: black;
+  padding-top: 96vh;
+}
+
+/* line 103, ../sass/print.scss */
+.btn-group .btn.active {
+  color: #1666c1;
+  background: #fff;
+  box-shadow: none;
+}
+
+/* line 109, ../sass/print.scss */
+#buttons-skills {
+  margin-bottom: 80px;
+}
+/* line 112, ../sass/print.scss */
+#buttons-skills button {
+  width: 50%;
+  padding: 15px 45px;
+}
+/* line 117, ../sass/print.scss */
+#buttons-skills .btn:first-child {
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+/* line 121, ../sass/print.scss */
+#buttons-skills .btn:last-child {
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+/* line 126, ../sass/print.scss */
+#buttons-skills .btn {
+  padding: 7px 60px;
+  font-size: 16px;
+  background: none;
+  border-color: #b9c4cC;
+  color: #ffffff;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+}
+
+@media (max-width: 767px) {
+  /* line 138, ../sass/print.scss */
+  .btn-group .btn {
+    padding: 7px 30px;
+  }
+}
+/* line 144, ../sass/print.scss */
+.btn-group .btn:last-child {
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+/* line 149, ../sass/print.scss */
+.btn-group > .btn:last-child:not(:first-child), .btn-group > .dropdown-toggle:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* line 154, ../sass/print.scss */
+.scroll-down {
+  text-align: center;
+  background-color: #1666c1;
+  box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.2);
+}
+/* line 155, ../sass/print.scss */
+.scroll-down a {
+  color: black;
+}
+/* line 159, ../sass/print.scss */
+.scroll-down a:after {
+  display: block;
+  margin-top: -7px;
+  content: "\f0d7";
+  font-family: fontAwesome;
+  font-size: 21px;
+}
+
+/* line 173, ../sass/print.scss */
+#services {
+  text-align: center;
+  background-color: #249acd;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+/* line 179, ../sass/print.scss */
+#services .section-title {
+  margin-bottom: 50px;
+  margin-top: 0;
+  font-size: 62px;
+  font-weight: 400;
+  color: #39444C;
+  text-align: center;
+}
+/* line 188, ../sass/print.scss */
+#services .text-center {
+  margin: 30px;
+}
+/* line 191, ../sass/print.scss */
+#services .tab-content {
+  margin-top: 40px;
+}
+/* line 194, ../sass/print.scss */
+#services .tab-content .scrollimation {
+  opacity: 0;
+  -webkit-transform: translateX(60px);
+  -moz-transform: translateX(60px);
+  -ms-transform: translateX(60px);
+  transform: translateX(60px);
+  -webkit-transition: -webkit-transform 1.2s ease-out, opacity 1.2s ease-out;
+  transition: transform 1.2s ease-out, opacity 1.2s ease-out;
+}
+/* line 203, ../sass/print.scss */
+#services .tab-content .scrollimation.in {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  transform: translateX(0px);
+}
+/* line 214, ../sass/print.scss */
+#services .service-icon {
+  text-align: center;
+  display: block;
+  margin: 0 auto 30px;
+  width: 180px;
+  height: 180px;
+  border: 1px solid #ddd;
+  color: #ffffff;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+/* line 226, ../sass/print.scss */
+#services .service-icon i {
+  font-size: 100px;
+  margin-top: 40px;
 }
