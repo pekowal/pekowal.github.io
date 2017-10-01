@@ -16,6 +16,10 @@ body {
   color: $color-main;
 }
 
+.font-color-main{
+  color: #FFFFFF;
+}
+
 #main-nav {
   background: $color-main;
   position: fixed;
@@ -81,10 +85,14 @@ body {
   position: fixed;
   color: $font-color-third;
   z-index: -100;
+  background-image: url("../img/portofliowp.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 
   .d1 {
     font-size: 72px;
-    color: $font-color-four;
+    color: $font-color-second;
   }
   .d2 {
     color: $font-color-second;
