@@ -14,12 +14,14 @@
     <link href='https://fonts.googleapis.com/css?family=Slabo+27px&subset=latin-ext' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,200' rel='stylesheet'
           type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Pacifico&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
     <link rel="stylesheet" href="css/animate.min.css" type="text/css"/>
     <link href="stylesheets/print.css" media="screen, projection" rel="stylesheet" type="text/css"/>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+
 
 
     <script src="js/jquery-3.2.1.min.js"></script>
@@ -46,16 +48,16 @@
     <div id="site-nav" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
             <li class="animated zoomIn">
-                <a href="#services" class="scrollto"><i class="fa fa-cog"></i>Specialties</a>
+                <a href="#services" class="scrollto"><i class="fa fa-cog"></i><span class="m-l-2">Specjalności</span></a>
             </li>
             <li class="animated zoomIn">
-                <a href="#about" class="scrollto"><i class="fa fa-graduation-cap"></i>Profile</a>
+                <a href="#about" class="scrollto"><i class="fa fa-graduation-cap"></i><span class="m-l-2">Doświadczenie</span></a>
             </li>
             <li class="animated zoomIn">
-                <a href="#portfolio" class="scrollto"><i class="fa fa-briefcase"></i>Portfolio</a>
+                <a href="#portfolio" class="scrollto"><i class="fa fa-briefcase"></i><span class="m-l-2">Portfolio</span></a>
             </li>
             <li class="animated zoomIn">
-                <a href="#contact" class="scrollto"><i class="fa fa-envelope"></i>Contact</a>
+                <a href="#contact" class="scrollto"><i class="fa fa-envelope"></i><span class="m-l-2">Kontakt</span></a>
             </li>
         </ul>
     </div><!--End navbar-collapse -->
@@ -68,15 +70,16 @@
 
     <div class="col-sm-10 col-sm-offset-1 text-center">
         <h1 class="animated fadeInDown d1">Jestem <span class="main-color">P</span>rzemek</h1>
-        <h2 class="animated fadeInDown d2"><span class="main-color">P</span>rogramista, <span
-                class="main-color">P</span>rojektant,
-            <span class="main-color">P</span>rzyjaciel</h2>
+        <h2 class="animated fadeInDown d2"><span class="main-color">P</span>rogramista i <span
+                class="main-color">W</span>izojner
+        </h2>
 
     </div>
 </section>
 <section id="main-content">
     <div class="scroll-down">
-        <a id="learn-me" href="#services" class="scrollto">Poznaj mnie</a>
+        <a id="learn-me" href="#services" class="scrollto">Poznaj mnie</a><br>
+        <i class="fas fa-arrow-down"></i>
     </div>
 
     <section id="services" class="big-padding">
@@ -99,20 +102,22 @@
 
                     <div class="col-sm-4 service-item scrollimation fade-left">
 
-                        <div class="service-icon "><span class="ui-icon ui-icon-jquery"></span></div>
+                        <div class="service-icon "><i class="fab fa-js"></i></div>
 
-                        <h3>Biblioteka Jquery</h3>
+                        <h3>JavaScript</h3>
 
-                        <p>To frontendu wykorzystują popularna bibliotekę jQuery. Pomaga </p>
+                        <p>Na obecną chwiłe UX tworzę przy wykorzystaniu biblioteki jQuery</p>
 
 
                     </div>
 
                     <div class="col-sm-4 service-item scrollimation fade-left">
 
-                        <div class="service-icon "><i class="fa fa-css3"></i></div>
+                        <div class="service-icon ">
+                            <i class="fab fa-css3"></i>
+                        </div>
 
-                        <h3>Nowoczesne style CSS3</h3>
+                        <h3>CSS3</h3>
 
                         <p>Animacje, transformacje, obsługa wielkiej ilości fontów to tylko część z możliwości
                             kaskodowych arkuszy stylów.</p>
@@ -124,7 +129,7 @@
 
                         <div class="service-icon "><i class="fa fa-mobile"></i></div>
 
-                        <h3>Responsive Design</h3>
+                        <h3>RWD</h3>
 
                         <p>Używając bootstrapa oraz stylów css przystosowuję stronę do obsługi na urządzeniach
                             mobilnych.</p>
@@ -137,7 +142,9 @@
 
                     <div class="col-sm-4 service-item">
 
-                        <div class="service-icon"><i class="fa fa-wordpress"></i></div>
+                        <div class="service-icon">
+                            <i class="fab fa-php"></i>
+                        </div>
 
                         <h3>PHP</h3>
 
@@ -149,22 +156,28 @@
 
                     <div class="col-sm-4 service-item">
 
-                        <div class="service-icon"><i class="fa fa-joomla"></i></div>
+                        <div class="service-icon">
+                            <i class="devicon-symfony-original"></i>
+                        </div>
 
                         <h3>Symfony</h3>
 
-                        <p>Do projektowania aplikacji używam Symfony. Jednego z najpopularniejszych frameworków dostępnych na rynku opartych o PHP i MVC </p>
+                        <p>Do projektowania aplikacji używam Symfony. Jednego z najpopularniejszych frameworków
+                            dostępnych na rynku opartych o PHP i MVC </p>
 
 
                     </div>
 
                     <div class="col-sm-4 service-item">
 
-                        <div class="service-icon"><i class="fa fa-drupal"></i></div>
+                        <div class="service-icon">
+                            <i class="devicon-doctrine-plain"></i>
+                        </div>
 
                         <h3>Doctrine</h3>
 
-                        <p>Działam na bazie danych za pomocą doctrine. Bazuje on na języku zapytań SQL oraz bazach MySLQ.</p>
+                        <p>Działam na bazie danych za pomocą doctrine. Bazuje on na języku zapytań SQL oraz bazach
+                            MySLQ.</p>
 
                     </div>
 
