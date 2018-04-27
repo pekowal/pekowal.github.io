@@ -1,88 +1,82 @@
 /* Welcome to Compass. Use this file to define print styles.
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
-/* line 11, ../sass/print.scss */
+@keyframes navabarToSmall {
+  from {
+    padding: 20px; }
+  to {
+    padding: 10px; } }
+@keyframes navabarToBig {
+  from {
+    padding: 10px; }
+  to {
+    padding: 20px; } }
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0); }
+  40% {
+    transform: translateY(-20px); }
+  60% {
+    transform: translateY(-10px); } }
 body {
-  color: #ffffff;
-}
+  color: #ffffff; }
 
-/* line 15, ../sass/print.scss */
 .main-color {
-  color: #1666c1;
-}
+  color: #1666c1; }
 
-/* line 19, ../sass/print.scss */
 .font-color-main {
-  color: #FFFFFF;
-}
+  color: #FFFFFF; }
 
-/* line 23, ../sass/print.scss */
 #main-nav {
   background: #1666c1;
   position: fixed;
   right: 0;
   left: 0;
   z-index: 1030;
-  padding: 20px;
-}
-@media screen and (min-width: 767px) {
-  /* line 23, ../sass/print.scss */
-  #main-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-}
-/* line 37, ../sass/print.scss */
-#main-nav .navbar-toggle {
-  background-color: #249acd;
-}
-/* line 39, ../sass/print.scss */
-#main-nav .navbar-toggle .icon-bar {
-  background-color: black;
-}
-/* line 43, ../sass/print.scss */
-#main-nav .container {
-  padding-top: 25px;
-  padding-bottom: 25px;
-}
-/* line 47, ../sass/print.scss */
-#main-nav .navbar-brand {
-  text-transform: uppercase;
-  letter-spacing: 10px;
-}
-/* line 48, ../sass/print.scss */
-#main-nav .navbar-brand .initial {
-  font-size: 20px;
-  letter-spacing: 5px;
-  color: #ffffff;
-}
-/* line 59, ../sass/print.scss */
-#main-nav #site-nav a {
-  min-width: 120px;
-  font-size: 16px;
-  color: #ffffff;
-  text-align: center;
-  padding: 7px 30px;
-  background: none;
-  transition: color 0.2s ease-out, padding 0.3s ease-out;
-}
-/* line 68, ../sass/print.scss */
-#main-nav #site-nav a:hover, #main-nav #site-nav a:focus {
-  padding-top: 4px;
-  padding-bottom: 10px;
-  color: #249acd;
-  background: none;
-}
-/* line 76, ../sass/print.scss */
-#main-nav #site-nav i {
-  margin-right: 15px;
-}
+  animation-name: navabarToBig;
+  animation-duration: 1s;
+  padding: 20px; }
+  #main-nav.scrolled {
+    padding: 10px;
+    animation-name: navabarToSmall;
+    animation-duration: 1s; }
+  @media screen and (min-width: 767px) {
+    #main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; } }
+  #main-nav .navbar-toggle {
+    background-color: #249acd; }
+    #main-nav .navbar-toggle .icon-bar {
+      background-color: black; }
+  #main-nav .container {
+    padding-top: 25px;
+    padding-bottom: 25px; }
+  #main-nav .navbar-brand {
+    text-transform: uppercase;
+    letter-spacing: 10px; }
+    #main-nav .navbar-brand .initial {
+      font-size: 20px;
+      letter-spacing: 5px;
+      color: #ffffff; }
+  #main-nav #site-nav a {
+    min-width: 120px;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    padding: 7px 30px;
+    background: none;
+    transition: color 0.2s ease-out, padding 0.3s ease-out; }
+    #main-nav #site-nav a:hover, #main-nav #site-nav a:focus {
+      padding-top: 4px;
+      padding-bottom: 10px;
+      color: #249acd;
+      background: none; }
+  #main-nav #site-nav i {
+    margin-right: 15px; }
 
-/* line 84, ../sass/print.scss */
 #first-section {
   position: fixed;
-  color: black;
   z-index: -100;
   background-image: url("../img/portofliowp.jpg");
   background-repeat: no-repeat;
@@ -90,51 +84,30 @@ body {
   background-position: center;
   height: 100vh;
   width: 100vw;
-  padding-top: 100px;
-}
-/* line 93, ../sass/print.scss */
-#first-section .d1 {
-  font-size: 72px;
-  color: #249acd;
-}
-/* line 97, ../sass/print.scss */
-#first-section .d2 {
-  color: #249acd;
-}
+  padding-top: 100px; }
+  #first-section .company-name {
+    font-size: 72px; }
 
-/* line 105, ../sass/print.scss */
 #main-content {
   color: black;
-  padding-top: 96vh;
-}
+  padding-top: calc(100vh - 68px); }
+  #main-content #learn-me {
+    padding: 10px; }
 
-/* line 111, ../sass/print.scss */
 .btn-group .btn.active {
   color: #1666c1;
   background: #fff;
-  box-shadow: none;
-}
+  box-shadow: none; }
 
-/* line 117, ../sass/print.scss */
-#buttons-skills {
-  margin-bottom: 80px;
-}
-/* line 120, ../sass/print.scss */
 #buttons-skills button {
   width: 50%;
-  padding: 15px 45px;
-}
-/* line 125, ../sass/print.scss */
+  padding: 15px 45px; }
 #buttons-skills .btn:first-child {
   border-top-left-radius: 7px;
-  border-bottom-left-radius: 7px;
-}
-/* line 129, ../sass/print.scss */
+  border-bottom-left-radius: 7px; }
 #buttons-skills .btn:last-child {
   border-top-right-radius: 7px;
-  border-bottom-right-radius: 7px;
-}
-/* line 134, ../sass/print.scss */
+  border-bottom-right-radius: 7px; }
 #buttons-skills .btn {
   padding: 7px 60px;
   font-size: 16px;
@@ -142,98 +115,68 @@ body {
   border-color: #b9c4cC;
   color: #ffffff;
   -webkit-transition: all .2s ease-out;
-  transition: all .2s ease-out;
-}
+  transition: all .2s ease-out; }
 
 @media (max-width: 767px) {
-  /* line 146, ../sass/print.scss */
   .btn-group .btn {
-    padding: 7px 30px;
-  }
-}
-/* line 152, ../sass/print.scss */
+    padding: 7px 30px; } }
 .btn-group .btn:last-child {
   border-top-right-radius: 7px;
-  border-bottom-right-radius: 7px;
-}
+  border-bottom-right-radius: 7px; }
 
-/* line 157, ../sass/print.scss */
 .btn-group > .btn:last-child:not(:first-child), .btn-group > .dropdown-toggle:not(:first-child) {
   border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
+  border-bottom-left-radius: 0; }
 
-/* line 162, ../sass/print.scss */
 .scroll-down {
   text-align: center;
   background-color: #1666c1;
   box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.2);
-}
-/* line 163, ../sass/print.scss */
-.scroll-down a {
-  color: black;
-}
+  padding: 10px;
+  font-size: 15px; }
+  .scroll-down #learn-me {
+    color: black;
+    animation: bounce 2s infinite;
+    font-size: 20px;
+    padding: 0; }
 
-/* line 181, ../sass/print.scss */
+.scrollAnimated {
+  opacity: 0; }
+  .scrollAnimated.in {
+    opacity: 1; }
+
 #services {
   text-align: center;
   background-color: #249acd;
   padding-bottom: 30px;
-  padding-top: 30px;
-}
-/* line 187, ../sass/print.scss */
-#services .section-title {
-  margin-bottom: 50px;
-  margin-top: 0;
-  font-size: 62px;
-  font-weight: 400;
-  color: #39444C;
-  text-align: center;
-}
-/* line 196, ../sass/print.scss */
-#services .text-center {
-  margin: 30px;
-}
-/* line 199, ../sass/print.scss */
-#services .tab-content {
-  margin-top: 40px;
-}
-/* line 202, ../sass/print.scss */
-#services .tab-content .scrollimation {
-  opacity: 0;
-  -webkit-transform: translateX(60px);
-  -moz-transform: translateX(60px);
-  -ms-transform: translateX(60px);
-  transform: translateX(60px);
-  -webkit-transition: -webkit-transform 1.2s ease-out, opacity 1.2s ease-out;
-  transition: transform 1.2s ease-out, opacity 1.2s ease-out;
-}
-/* line 211, ../sass/print.scss */
-#services .tab-content .scrollimation.in {
-  opacity: 1;
-  -webkit-transform: translateX(0px);
-  -moz-transform: translateX(0px);
-  -ms-transform: translateX(0px);
-  transform: translateX(0px);
-}
-/* line 222, ../sass/print.scss */
-#services .service-icon {
-  text-align: center;
-  display: block;
-  margin: 0 auto 30px;
-  width: 180px;
-  height: 180px;
-  border: 1px solid #ddd;
-  color: #ffffff;
-  border-radius: 50%;
-  overflow: hidden;
-  -webkit-transition: all .2s ease-in;
-  transition: all .2s ease-in;
-  font-size: 100px;
-  padding-top: 20px;
-}
-/* line 236, ../sass/print.scss */
-#services .service-icon i {
-  font-size: 100px;
-  margin-top: 40px;
-}
+  padding-top: 30px; }
+  #services .section-title {
+    margin-bottom: 50px;
+    margin-top: 0;
+    font-size: 62px;
+    font-weight: 400;
+    color: #39444C;
+    text-align: center; }
+  #services .text-center {
+    margin: 30px; }
+  #services .tab-content {
+    margin-top: 40px; }
+  #services .service-icon {
+    text-align: center;
+    display: block;
+    margin: 0 auto 30px;
+    width: 180px;
+    height: 180px;
+    border: 1px solid #ddd;
+    color: #ffffff;
+    border-radius: 50%;
+    overflow: hidden;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+    font-size: 100px;
+    padding-top: 20px; }
+    #services .service-icon i {
+      font-size: 100px;
+      margin-top: 40px; }
+
+/*# sourceMappingURL=print.css.map */

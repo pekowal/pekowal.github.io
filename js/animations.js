@@ -5,18 +5,25 @@ $(function () {
 
 
 
-    var animatedDiv = $('.scrollimation');
+    var animatedDiv = $('.scrollAnimated');
 
     animatedDiv.on('scrollSpy:enter', function() {
+
+        let animationClass = $(this).data('animation');
+
+        animatedDiv.addClass(animationClass);
         animatedDiv.addClass('in');
-        console.log('enter:', $(this).attr('id'));
+
     });
 
     animatedDiv.on('scrollSpy:exit', function() {
+        let animationClass = $(this).data('animation');
 
+        animatedDiv.removeClass(animationClass);
         animatedDiv.removeClass('in');
 
-        console.log('exit:', $(this).attr('id'));
+
+
     });
 
     animatedDiv.scrollSpy();
