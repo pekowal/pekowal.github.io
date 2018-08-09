@@ -8,6 +8,22 @@ $font-color-second: rgb(36, 154, 205);
 $font-color-third: black;
 $font-color-four: #39444C;
 
+@keyframes navabarToSmall {
+  from {padding: 20px;}
+  to {padding: 10px;}
+}
+
+@keyframes navabarToBig {
+  from {padding: 10px;}
+  to {padding: 20px;}
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  40% {transform: translateY(-20px);}
+  60% {transform: translateY(-10px);}
+}
+
 body {
   color: $font-color-main;
 }
@@ -26,6 +42,14 @@ body {
   right: 0;
   left: 0;
   z-index: 1030;
+  animation-name: navabarToBig;
+  animation-duration: 1s;
+
+  &.scrolled{
+    padding: 10px;
+    animation-name: navabarToSmall;
+    animation-duration: 1s;
+  }
 
   @media screen and (min-width: 767px) {
     display: flex;
@@ -83,20 +107,16 @@ body {
 
 #first-section {
   position: fixed;
-  color: $font-color-third;
   z-index: -100;
   background-image: url("../img/portofliowp.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
 
-  .d1 {
+  .company-name {
     font-size: 72px;
-    color: $font-color-second;
   }
-  .d2 {
-    color: $font-color-second;
-  }
+
   height: 100vh;
   width: 100vw;
   padding-top: 100px;
@@ -104,7 +124,10 @@ body {
 
 #main-content {
   color: $font-color-third;
-  padding-top: 96vh;
+  padding-top: calc(100vh - 68px);
+  #learn-me{
+    padding: 10px;
+  }
 
 }
 
@@ -116,7 +139,6 @@ body {
 
 #buttons-skills{
 
-  margin-bottom: 80px;
   button{
     width: 50%;
     padding: 15px 45px;
@@ -160,22 +182,30 @@ body {
 }
 
 .scroll-down {
-  a {
+  #learn-me {
     color: $font-color-third;
-
+    animation: bounce 2s infinite;
+    font-size: 20px;
+    padding: 0;
   }
   text-align: center;
   background-color: $color-main;
   box-shadow: 0 -5px 5px rgba(0, 0, 0, .2);
+  padding: 10px;
+  font-size: 15px;
+
 
 }
 
-m-l-2{
-
-}
 
 #site-nav{
   //padding-top: 20px;
+}
+.scrollAnimated{
+  opacity: 0;
+  &.in{
+    opacity: 1;
+  }
 }
 
 #services {
@@ -199,25 +229,7 @@ m-l-2{
   .tab-content {
     margin-top: 40px;
 
-    .scrollimation {
-      opacity: 0;
-      -webkit-transform: translateX(60px);
-      -moz-transform: translateX(60px);
-      -ms-transform: translateX(60px);
-      transform: translateX(60px);
-      -webkit-transition: -webkit-transform 1.2s ease-out, opacity 1.2s ease-out;
-      transition: transform 1.2s ease-out, opacity 1.2s ease-out;
 
-      &.in {
-
-        opacity: 1;
-        -webkit-transform: translateX(0px);
-        -moz-transform: translateX(0px);
-        -ms-transform: translateX(0px);
-        transform: translateX(0px);
-
-      }
-    }
   }
   .service-icon {
     text-align: center;
