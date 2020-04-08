@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+    nginx:
+        build: ./docker/nginx
+        ports:
+            - "81:80"
+            - "443:443"
+        volumes:
+            - ./logs/nginx:/var/log/nginx:cached
+            - ./:/var/www/public:cached
